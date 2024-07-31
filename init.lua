@@ -202,6 +202,14 @@ vim.api.nvim_set_keymap('n', '<A-h>', '<C-w>H', opts) -- Moves a split to the le
 vim.api.nvim_set_keymap('n', '<A-j>', '<C-w>J', opts) -- Moves a split to the dow
 vim.api.nvim_set_keymap('n', '<A-k>', '<C-w>K', opts) -- Moves a split to the up
 
+-- Leader Keymaps for opening netrw quicker
+vim.keymap.set('n', '<leader>pv', vim.cmd.Ex) -- opens netrw in current window
+vim.keymap.set('n', '<leader>pl', vim.cmd.Lexplore) --opens netre in a new v-split to the left
+
+-- Line Move Remap PrimeTime is the Goat --
+vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
+vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
